@@ -5,8 +5,9 @@ Two layers added by us in this branch, which is,
 #MaskLayer
 using feature map and correspond coefficients to generate mask.
 ##usage
-layer{
-  name: "mask_layer"
+
+layer{  
+  name: "mask_layer" 
   type: "Mask"
   bottom: "pool5"
   bottom: "fc10_alpha"
@@ -16,6 +17,7 @@ layer{
 #AssignmentLayer
 using mask and feature map to generate new features, like attention model.
 ##usage
+
 layer{
   name: "assignment_layer"
   type: "Assignment"
