@@ -8,23 +8,23 @@ using feature map and correspond coefficients to generate mask.
 
 layer  
 {   
-    name: "mask_layer"  
-    type: "Mask"  
-    bottom: "pool5"  
-    bottom: "fc10_alpha"  
-    top: "mask_output"  
+        name: "mask_layer"  
+        type: "Mask"  
+        bottom: "pool5"  
+        bottom: "fc10_alpha"  
+        top: "mask_output"  
 }
 
 #AssignmentLayer
 using mask and feature map to generate new features, like attention model.
 ##usage
 
-layer
+layer  
 {  
-    name: "assignment_layer"  
-    type: "Assignment"  
-    bottom: "pool5"  
-    bottom: "mask_output_normed"  
-    bottom: "fc10_beta"  
-    top: "pool5_1"  
+        name: "assignment_layer"  
+        type: "Assignment"  
+        bottom: "pool5"  
+        bottom: "mask_output_normed"  
+        bottom: "fc10_beta"  
+        top: "pool5_1"  
 }
