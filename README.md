@@ -1,9 +1,9 @@
 This my own Caffe branch, work with ZHAN Huangying.
 
-Two layers added by us in this branch, which is,
+Two layers added by us in this branch, which are,
 
 #MaskLayer
-using feature map and correspond coefficients to generate mask.
+Using feature map and correspond coefficients to generate mask.
 ##usage
 
 layer  
@@ -16,7 +16,7 @@ layer
 }
 
 #AssignmentLayer
-using mask and feature map to generate new features, like attention model.
+Using mask and feature map to generate new features.
 ##usage
 
 layer  
