@@ -26,6 +26,8 @@ void MaskLayer<Dtype>::Forward_cpu(const vector<Blob<Dtype>*>& bottom,
   const int channels = bottom[0]->channels();
   const int height = bottom[0]->height();
   const int width = bottom[0]->width();
+  const int count = top[0]->count();
+  caffe_set(count, Dtype(0), top_data);
   int idx0=0;
   int idx1=0;
   for (int n = 0; n < batch_size; ++n){
